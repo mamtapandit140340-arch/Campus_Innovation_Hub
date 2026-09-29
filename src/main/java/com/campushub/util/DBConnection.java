@@ -9,9 +9,8 @@ public class DBConnection {
     private static final String URL =
             "jdbc:mysql://localhost:3306/campus_hub";
 
-    private static final String USER = "root";
-
-    private static final String PASSWORD = "root";
+    String username = System.getenv("DB_USERNAME");
+    String password = System.getenv("DB_PASSWORD");
 
     public static Connection getConnection() throws SQLException {
 
